@@ -1,0 +1,49 @@
+  <section>
+    <div class=container>
+        <table class="table mt-5">
+         <thead>
+             <tr>
+                 <th scope="col">Items</th>
+                 <th scope="col">Title</th>
+                 <th scope="col">Quantity</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Price</th>
+             </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+                    <td><img style="width:70px;height:70px" src="/product-images/{{this.product._id}}.jpg"</td>
+                    <td>{{this.product.Name}}</td>
+                    <td>{{this.quantity}}</td>
+                    <td>{{this.product.Description}}</td>
+                    <td>Rs.{{this.product.Price}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+          </table> 
+    </div>
+</section>
+  {{!--<section>
+        <div class="container mt-5">
+        <div class="row">
+            {{#each products}}
+            <div class="col-md-3 p-3">
+                <div class="card" style="width: 15rem; height:24rem">
+                    <img src="/product-images/{{this.product._id}}.jpg"
+                        class="card-img-top" alt="..." style="height: 10rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.products.Name}}</h5>
+                        <p class="card-text">Rs.{{this.product.Price}}</p>
+                        <p class="card-text">Quantity:{{this.quantity}}</p>
+                        <p class="card-text">{{this.product.Description}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        </div>
+    </section>
+    <script>
+        
+    </script>--}}
